@@ -239,8 +239,6 @@ function getArtistByIndex(arr, index) {
 
 console.log('task 3', getArtistByIndex(artists, 0));
 
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
 1. Receive an array
@@ -250,11 +248,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(arr) {
+  const searchedCentury = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i].years.split(' ', 1) >= 1900 && arr[i].years.split(' ', 1) <= 2000 ) {
+      searchedCentury.push(arr[i].name);
+    }
+  }
+  return searchedCentury;
 }
 
-
+console.log('task 4', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
