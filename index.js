@@ -296,11 +296,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(arr) {
+  const addedArtist = {
+    'id': 20,
+    'name': 'Victor Brambila', 
+    'years': '1993 - 2022',
+    'genre': 'Web Design', 
+    'nationality': 'Mexican',
+    'bio': 'Learning as I go'
+  };
+  arr.push(addedArtist);
+  return arr;
 }
 
-
+console.log('task 6', addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
